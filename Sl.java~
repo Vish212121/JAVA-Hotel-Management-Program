@@ -1,0 +1,8 @@
+public class Sl
+{
+    public static void main(String x)
+    {
+        int l=x.length();
+        System.out.println(x);
+    }
+}

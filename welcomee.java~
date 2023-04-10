@@ -1,0 +1,25 @@
+public class welcomee
+{
+    void welcome()throws IOException, InterruptedException
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        PizzaHut o=new PizzaHut();
+        String wel="Welcome to PizzaHut!!!";
+        System.out.print("\n\n\n\n\n\t\t\t\t\t      ");
+        for(int i=0;i<wel.length();i++)
+        {
+            char ch=wel.charAt(i);
+            Thread.sleep(100);
+            System.out.print(ch);
+        }
+        Thread.sleep(200);
+        System.out.println("\f");
+        o.f("Enter the Name of the Customer.");
+        name=in.readLine();
+        o.f("Enter Phone Number.");
+        phone=Long.parseLong(in.readLine());
+        o.f("\f");
+        o.load();
+    }
+}

@@ -1,0 +1,69 @@
+import java.io.*;
+public class dessert extends Loading
+{
+    static int amtde;
+    static int de;
+    static int quandes;
+    static int dee;
+    static int des[]=new int[10];
+    static int desq[]=new int[10];
+    int pricedes[]={130,100,125,145,135,155,165,155,150,199,175,170,175,180,199};
+    String menudes[]={"Mixed Berry Mousse            ","Mango Coconut Souffle         ","Brownie with Vanilla Ice Cream","Cheese Cake                   ","Chocolate-Mint Bars           ","Rasberry-Rhubarb Pie          ","Classic Fudge-Walnut Brownies ","Caramel Ice Cream             ","Peanut Butter Pie             ","Butterscotch Mousse Cake      ","Choco Lava Cake               ","Brownie Fantasy               ","Ice Cream Cookie              ","Caramel Brownie               ","Waffles                       "};
+    void Desserts()throws IOException, InterruptedException 
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        dessert o=new dessert();
+        int price[]={};
+        o.load();
+        o.fp("\t\t\t\tWelcome to Desserts Corner.\n");
+        o.fp("The Menu is as following");
+        o.fp("_________________________________________________________________________________");
+        o.fp("\tMenu\t\t\t\t\tPrices");
+        o.fp("\t1.Mixed Berry Mousse\t\t\tRs.130/-");
+        o.fp("\t2.Mango Coconut Souffle\t\t\tRs.100/-");
+        o.fp("\t3.Brownie with Vanilla Ice Cream\tRs.125/-");
+        o.fp("\t4.Cheese Cake\t\t\t\tRs.145/-");
+        o.fp("\t5.Chocolate-Mint Bars\t\t\tRs.135/-");
+        o.fp("\t6.Raspberry-Rhubarb Pie\t\t\tRs.155/-");
+        o.fp("\t7.Classic Fudge-Walnut Brownies\t\tRs.165/-");
+        o.fp("\t8.Caramel Ice Cream\t\t\tRs.155/-");
+        o.fp("\t9.Peanut Butter Pie\t\t\tRs.160/-");
+        o.fp("\t10.Butterscotch Mousse Cake\t\tRs.199/-");
+        o.fp("\t11.Choco Lava Cake\t\t\tRs.175/-");
+        o.fp("\t12.Brownie Fantasy\t\t\tRs.170/-");
+        o.fp("\t13.Ice Cream Cookie\t\t\tRs.175/-");
+        o.fp("\t14.Caramel Brownie\t\t\tRs.180/-");
+        o.fp("\t15.Waffles\t\t\t\tRs.199/-");
+        o.fp("Enter how many types of dessert would you like to order");
+        dee=Integer.parseInt(in.readLine());
+        for(int i=0;i<dee;i++)
+        {
+            o.fp("Enter the Serial Number of the Dessert you want to order.");
+            int e=Integer.parseInt(in.readLine());
+            if(e<=15)
+            {
+                de=e;
+            }
+            else
+            {
+                System.out.println("Enter a valid choice.");
+                de=Integer.parseInt(in.readLine());
+            }
+            des[i]=de-1;
+            o.fp("Enter the Quantity of "+menudes[des[i]]);
+            quandes=Integer.parseInt(in.readLine());
+            desq[i]=quandes;
+            amtde=amtde+pricedes[des[i]]*quandes;
+        }
+        o.fp("Thank you for ordering.");
+        o.fp("Hope you enjoy your Pizza.");
+        Thread.sleep(1000);
+        o.f("\f");
+        o.load();
+        o.fp("Press enter to Continue");
+        String a=in.readLine();
+        CONTROL p=new CONTROL();
+        p.start();
+    }
+}

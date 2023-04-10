@@ -1,0 +1,26 @@
+import java.io.*;
+public class pizzahutspecial extends desert
+{
+    void Pizzahutspecial()throws IOException, InterruptedException 
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        pizzahutspecial o=new pizzahutspecial();
+        int price[]={};
+        o.load();
+        o.f("\t\tWelcome to PIZZA HUT's Special Corner.\n");
+        o.f("The Menu is as following");
+        o.f("Menu\t\t\tPrices");
+        Thread.sleep(300);
+        o.f("\f");
+        o.load();
+        o.f("Your Order was Succesfully placed.");
+        o.f("Press enter to Continue");
+        String a=in.readLine();
+    }
+
+    void f(String x)
+    {
+        System.out.println(x);
+    }
+}

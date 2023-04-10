@@ -1,0 +1,102 @@
+import java.io.*;
+public class PizzaHut extends pizzahutspecial
+{
+    int totalamount;
+    static String name;
+    static long phone;
+    void welcome()throws IOException, InterruptedException
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        PizzaHut o=new PizzaHut();
+        String wel="Welcome to PizzaHut!!!";
+        System.out.print("\n\n\n\n\n\t\t\t\t\t      ");
+        for(int i=0;i<wel.length();i++)
+        {
+            char ch=wel.charAt(i);
+            Thread.sleep(100);
+            System.out.print(ch);
+        }
+        Thread.sleep(200);
+        System.out.println("\f");
+        o.f("Enter the Name of the Customer.");
+        name=in.readLine();
+        o.f("Enter Phone Number.");
+        phone=Long.parseLong(in.readLine());
+        o.f("\f");
+        o.load();
+    }
+
+    void start()throws IOException, InterruptedException 
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        int choice; 
+        PizzaHut o=new PizzaHut();
+        o.f("Enter 1 for Sides or Beverages.");
+        o.f("Enter 2 for Veg Pizza.");
+        o.f("Enter 3 for Non Veg Pizza.");
+        o.f("Enter 4 for PIZZA HUT's Special Pizza.");
+        o.f("Enter 5 for Deserts.");
+        choice=Integer.parseInt(in.readLine());
+        switch(choice)
+        {
+            case 1:
+            o.Sides();
+            break;
+            case 2:
+            o.VegPizza();
+            break;
+            case 3:
+            o.Nonveg();
+            break;
+            case 4:
+            o.Pizzahutspecial();
+            break;
+            case 5:
+            o.Deserts();
+            break;
+        }
+    }
+    
+    void BILL()throws InterruptedException 
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        PizzaHut o=new PizzaHut();
+        o.load();
+        o.f("\n\n\t\t\t\t\t***************BILL***************\n\n");
+        o.f(" Customer Name:- "+name);
+        o.f(" Phone Number :- "+phone);
+    }
+
+    public static void main()throws IOException, InterruptedException 
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        PizzaHut o=new PizzaHut();
+        o.welcome();
+        o.start();
+        for(int i=0;i<5;i++)
+        {
+            o.f("Enter 1 to Continue to order more or 2 to get the bill.");
+            int cho=Integer.parseInt(in.readLine());
+            switch(cho)
+            {
+                case 1:
+                o.start();
+                break;
+                case 2:
+                o.BILL();
+                i=5;
+                break;
+            }
+        }
+    }
+
+    void f(String x)
+    {
+        System.out.println(x);
+    }
+
+}

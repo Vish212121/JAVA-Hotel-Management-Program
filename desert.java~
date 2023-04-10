@@ -1,0 +1,25 @@
+
+import java.io.*;
+public class desert extends Loading
+{
+
+    void Deserts()throws IOException, InterruptedException 
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        desert o=new desert();
+        int price[]={};
+        o.load();
+        o.f("\t\tWelcome to Deserts Corner.\n");
+        o.f("The Menu is as following");
+        o.f("Menu\t\t\tPrices");
+        Thread.sleep(300);
+        o.f("\f");
+        o.load();
+        o.f("Your Order was Succesfully placed.");
+        o.f("Press enter to Continue");
+        String a=in.readLine();
+        CONTROL p=new CONTROL();
+        p.start();
+    }
+}

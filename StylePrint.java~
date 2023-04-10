@@ -1,0 +1,47 @@
+public class StylePrint
+{
+    public static void main()
+    {
+        StylePrint ob=new StylePrint();
+    }
+
+    void  pln(String na)
+    {
+        System.out.println(na);
+    }
+
+    void print(String na)
+    {
+        System.out.print(na);
+    }
+
+    void f(String na) throws InterruptedException
+    {
+        for(int i=0;i<na.length();i++)
+        {
+            System.out.print(na.charAt(i));
+            Thread.sleep(100);
+        }
+        Thread.sleep(150);
+        System.out.println();
+    }
+
+    void fp(String na)throws InterruptedException
+    {
+        for(int i=0;i<na.length();i++)
+        {
+            System.out.print(na.charAt(i));
+            if(na.charAt(i)==' ')
+                Thread.sleep(0);
+            else
+                Thread.sleep(10);
+        }
+        System.out.println();
+    }
+
+    void err(String na)
+    {
+        System.err.println(na);
+    }
+}
+

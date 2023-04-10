@@ -1,0 +1,65 @@
+import java.io.*;
+public class sides extends beverages
+{
+    static int amtsi;
+    static int si;
+    static int quansid;
+    static int sii;
+    static int sid[]=new int[10];
+    static int sidq[]=new int[10];
+    int pricesid[]={109,119,129,139,100,110,130,100,135,155,145,129};
+    String menusid[]={"Crinkle Fries                 ","Crunchy Strips                ","Simple Fries                  ","Cheese Fries                  ","Potato Cheese Shots           ","Taco Mexicana-veg             ","Taco Mexicana-Nonveg          ","Waffle Fries                 ","Burger Pizza-veg              ","Burger Pizza-Nonveg          ","Stuffed Garlic Breadsticks    ","Mozzaralla Cheesy Sticks      "};
+    void Sides()throws IOException, InterruptedException 
+    {
+        InputStreamReader read=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(read);
+        sides o=new sides();
+        o.load();    
+        o.fp("\t\t\t\tWelcome to Sides corner.\n");
+        o.fp("The Menu is as following");
+        o.fp("_________________________________________________________________________________");
+        o.fp("\tMenu\t\t\t\tPrices");
+        o.sp("\t1.Crinkle Fries\t\t\tRs.109/-");
+        o.sp("\t2.Crunchy Strips\t\tRs.119/- ");
+        o.sp("\t3.Simple Fries\t\t\tRs.129/-");
+        o.sp("\t4.Cheese Fries\t\t\tRs.139/-");
+        o.sp("\t5.Potato Cheese Shots\t\tRs.100/-");
+        o.sp("\t6.Taco Mexicana-veg\t\tRs.110/-");
+        o.sp("\t7.Taco Mexicana-Nonveg\t\tRs.130/-");
+        o.sp("\t8.Waffle Fries\t\t\tRs.100/-");
+        o.sp("\t9.Burger Pizza-veg\t\tRs.135/-");
+        o.sp("\t10.Burger Pizza-Nonveg\t\tRs.155/-");
+        o.sp("\t11.Stuffed Garlic Breadsticks\tRs.145/-");
+        o.sp("\t12.Mozzaralla Cheesy Sticks\tRs.129/-");
+        o.fp("Enter how many types of sides would you like to order.");
+        sii=Integer.parseInt(in.readLine());
+        for(int i=0;i<sii;i++)
+        {
+            o.fp("Enter the Serial Number of the Side you want to order.");
+            int a=Integer.parseInt(in.readLine());
+            if(a<=12)
+            {
+                si=a;
+            }
+            else
+            {
+                System.out.println("Enter a valid choice.");
+                si=Integer.parseInt(in.readLine());
+            }
+            sid[i]=si-1;
+            o.fp("Enter the Quantity of "+menusid[sid[i]]);
+            quansid=Integer.parseInt(in.readLine());
+            sidq[i]=quansid;
+            amtsi=amtsi+pricesid[sid[i]]*quansid;
+        }
+        o.fp("Thank you for ordering.");
+        o.fp("Hope you enjoy your Sides.");
+        Thread.sleep(1000);
+        o.fp("\f");
+        o.load();
+        o.fp("Press enter to Continue");
+        String a=in.readLine();
+        CONTROL p=new CONTROL();
+        p.start();
+    }
+}

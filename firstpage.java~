@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class firstpage extends Loading
+{
+    void First()throws InterruptedException
+    {
+        Scanner sc=new Scanner(System.in);
+        firstpage o=new firstpage();
+        o.sp("\n\n\n\n\n\n\n\n\t\t\t\tPIZZA HUT");
+        o.p("\f\n\n\n\n");
+            o.p("\t\t\t                      o  o");
+            o.p("\t\t\t                    o      o");
+            o.p("\t\t\t                   o Loading o");
+            o.p("\t\t\t                    o  10%  o");
+            o.p("\t\t\t                      o  o ");
+            Thread.sleep(300);
+            {
+                o.p("\f\n\n\n\n");
+                o.p("\t\t\t                      o  o");
+                o.p("\t\t\t                    o      o");
+                o.p("\t\t\t                   o Loading ?");
+                o.p("\t\t\t                    o  30%  o");
+                o.p("\t\t\t                      o  o ");
+            }
+            Thread.sleep(300);
+            {
+                o.p("\f\n\n\n\n");
+                o.p("\t\t\t                      o  o");
+                o.p("\t\t\t                    o      o");
+                o.p("\t\t\t                   o Loading o");
+                o.p("\t\t\t                    o  50%  o");
+                o.p("\t\t\t                      o  ? ");
+            }
+            Thread.sleep(300);
+            {
+                o.p("\f\n\n\n\n");
+                o.p("\t\t\t                      o  o");
+                o.p("\t\t\t                    o      o");
+                o.p("\t\t\t                   ? Loading o");
+                o.p("\t\t\t                    o  70%  o");
+                o.p("\t\t\t                      o  o ");
+            }
+            Thread.sleep(300);
+            {
+                o.p("\f\n\n\n\n");
+                o.p("\t\t\t                      ?  o");
+                o.p("\t\t\t                    o      o");
+                o.p("\t\t\t                   o Loading o");
+                o.p("\t\t\t                    o  90%  o");
+                o.p("\t\t\t                      o  o ");
+            }
+            Thread.sleep(300);
+            {
+                o.p("\f\n\n\n\n");
+                o.p("\t\t\t                      o  ?");
+                o.p("\t\t\t                    o      o");
+                o.p("\t\t\t                   o Loading o");
+                o.p("\t\t\t                    o  100% o");
+                o.p("\t\t\t                      o  o ");
+            }
+            Thread.sleep(1000);
+            o.p("\f");
+    }
+}

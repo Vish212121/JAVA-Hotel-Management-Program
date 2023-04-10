@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ prin()
+comment1.params=na
+comment1.target=void\ pln(java.lang.String)
+comment2.params=na
+comment2.target=void\ print(java.lang.String)
+comment3.params=na
+comment3.target=void\ f(java.lang.String)
+comment4.params=na
+comment4.target=void\ fp(java.lang.String)
+comment5.params=na
+comment5.target=void\ err(java.lang.String)
+comment6.params=x
+comment6.target=void\ sp(java.lang.String)
+numComments=7

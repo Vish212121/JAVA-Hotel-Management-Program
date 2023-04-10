@@ -1,0 +1,7 @@
+public class dou
+{
+    public static void main()
+    {
+        System.out.println("u20B9");
+    }
+}
